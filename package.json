@@ -1,0 +1,21 @@
+{
+  "name": "webpack-linters-module2",
+  "version": "1.0.0",
+  "description": "This is a template repository for setting up a project with Webpack and linters (ESLint and Stylelint) configured. It provides a solid foundation for building JavaScript and CSS projects while ensuring code quality and adherence to coding standards.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
