@@ -1,6 +1,6 @@
 import './index.css';
 
-const todoContainer = document.getElementById('task-list');
+const todoContainer = document.getElementById('todo-task-list');
 const tasks = [
   {
     description: 'Clean the house',
@@ -19,7 +19,7 @@ const tasks = [
   },
 ];
 
-export default class DisplayTasks {
+export default class DisplayTodoTasks {
   static renderTasks() {
     tasks.sort((a, b) => a.index - b.index);
     todoContainer.innerHTML = '';
@@ -38,5 +38,5 @@ export default class DisplayTasks {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  DisplayTasks.renderTasks();
+  DisplayTodoTasks.renderTasks();
 });

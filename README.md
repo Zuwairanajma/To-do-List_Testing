@@ -1,7 +1,7 @@
 # To-do-List
 <a name="readme-top"></a>
 <div align="center">
-  <img src="books-logo.png" alt="logo" width="140"  height="auto" />
+  <img src="to-do logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>To-do List Project</b></h3>
@@ -25,13 +25,13 @@
 - [🙏 Acknowledgements](#acknowledgements)
 
 
-# 📖 "Awesome Books with ES6 Project!" <a name="about-project"></a>
+# 📖 "To-do List with webpack Project!" <a name="about-project"></a>
 
 
-Awesome books with ES6 is a website built with modules files based on various functionalities, the stacks used to build the project are HTML, CSS and JS. You can add book to the list and the book list will be stored for future use, you can also remove book from the list if such is no loneger needed, it is a very flexible website. The project consist of The following sections
--The list section.
--The add book section. 
--The contact section.
+To-do-list is a website built with modules files based on various functionalities, the stacks used to build the project are HTML, CSS and JS. You can tasks to the list and the task will be stored for future use, you can also remove tasks from the list if such is no loneger needed, it is a very flexible website. The project consist of The following sections
+-The to do list header section.
+-The Task list section. 
+-The clear completed task section.
 
 ## 🛠 Built With <a name="built-with"></a>
 ### Tech Stack <a name="tech-stack"></a>
@@ -104,6 +104,9 @@ Installations required to run this project:
 - Eslint installation. Run the following command:
 >  npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x
 
+- Webpack installation. Run the following command:
+> npm install --save-dev style-loader css-loader html-webpack-plugin webpack-dev-server
+
 
 ### Usage
 
@@ -115,11 +118,12 @@ To run tests, run the following commands:
 
 > npx hint .
 > npx stylelint "**/*.{css,scss}"
-
+> npx eslint .
+> npm start
 
 ### Deployment
 
-You can deploy this project adding new lines of code to index.html and styles.css files.
+You can deploy this project using github pages or other hosting sites like netlify.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
