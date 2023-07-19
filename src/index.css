@@ -37,7 +37,7 @@ body {
   box-shadow:
     rgba(60, 64, 67, 0.3) 0 1px 2px 0,
     rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
-    background-position: center;
+  background-position: center;
 }
 
 .display-div {
@@ -111,7 +111,7 @@ ul li {
   height: 84px;
   color: #7a869a;
   background-color: #e4e4e4;
-  box-shadow: 1px 1px 1px 1px; 
+  box-shadow: 1px 1px 1px 1px;
 }
 
 input[type="checkbox"],
@@ -140,8 +140,8 @@ input[type='text'] {
   font-size: 18px;
   font-style: italic;
   padding-left: 30px;
-  border: none; 
-  color: #7a869a; 
+  border: none;
+  color: #7a869a;
   margin-bottom: 0;
 }
 
