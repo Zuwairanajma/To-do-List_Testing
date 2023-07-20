@@ -23,7 +23,7 @@ body {
 .initial-container {
   width: 100%;
   background-color: #e6eaef;
-  height: 90vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   margin: 24px 0;
@@ -31,8 +31,8 @@ body {
 
 .sub-container {
   width: 600px;
-  min-height: 327px;
-  margin: 80px auto;
+  min-height: 457px;
+  margin: 20px auto;
   background-color: #fff;
   box-shadow:
     rgba(60, 64, 67, 0.3) 0 1px 2px 0,
@@ -67,7 +67,7 @@ h2 {
 
 form {
   width: 600px;
-  height: 47px;
+  height: 40px;
   display: flex;
   justify-content: space-between;
   margin-right: 20px;
@@ -90,7 +90,7 @@ ul {
 
 ul li {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding-left: 26px;
   align-items: center;
   padding-bottom: 15px;
@@ -98,9 +98,14 @@ ul li {
   border-bottom: #7a869a 1px solid;
 }
 
-.fa-ellipsis-vertical {
-  display: block;
-  margin-right: 24px;
+.fa-ellipsis-v {
+  position: absolute;
+  right: 25%;
+  margin-top: -5px;
+}
+
+.fa-trash-o {
+  margin-top: -10px;
 }
 
 .wipe-all-out {
@@ -151,4 +156,25 @@ input[type='text'] {
   list-style: none;
   color: #7a869a;
   padding-left: 0;
+  height: 300px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+button[type='submit'] {
+  background-color: transparent;
+  border: none;
+}
+
+.delete-button {
+  background-color: transparent;
+  border: none;
+  color: #c0392b;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  padding: 0;
 }

@@ -1,42 +1,19 @@
 import './index.css';
+import { renderTaskList, addNewTask } from './todoFunctions.js';
 
-const todoContainer = document.getElementById('todo-task-list');
-const tasks = [
-  {
-    description: 'Clean the house',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'Code for two hours',
-    completed: false,
-    index: 2,
-  },
-  {
-    description: 'Complete to do list project',
-    completed: true,
-    index: 3,
-  },
-];
+const newTask = document.getElementById('new-task-add');
+const form = document.querySelector('form');
 
-export default class DisplayTodoTasks {
-  static renderTasks() {
-    tasks.sort((a, b) => a.index - b.index);
-    todoContainer.innerHTML = '';
-    tasks.forEach((task, index) => {
-      todoContainer.innerHTML += `
-        <li class="task" draggable="true" data-index="${index}">
-          <div class="checkbox-container">
-            <input type="checkbox" name="${task.description}" ${task.completed ? 'checked' : ''}>
-            <input type="text" value="${task.description}" readonly>
-          </div>
-          <i class="fas fa-ellipsis-vertical" data-index="${index}"></i>
-        </li>
-      `;
-    });
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const taskDescription = newTask.value;
+  if (taskDescription.trim() === '') {
+    return;
   }
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-  DisplayTodoTasks.renderTasks();
+  addNewTask(taskDescription);
+  newTask.value = '';
 });
+
+window.addEventListener('load', renderTaskList);
