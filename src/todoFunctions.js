@@ -1,5 +1,3 @@
-// import { markAsCompleted, markAsIncomplete } from './status.js';
-
 const taskList = document.getElementById('todo-task-list');
 let editTaskDescription;
 let deleteTask;
@@ -20,36 +18,6 @@ const createTaskLists = (task) => {
   checkboxElement.type = 'checkbox';
   checkboxElement.checked = task.completed;
 
-  // const markAsCompleted = (task) => {
-  //   task.completed = true;
-  // };
-
-  // const markAsIncomplete = (task) => {
-  //   task.completed = false;
-  // };
-
-  // checkboxElement.addEventListener('change', () => {
-  //   if (checkboxElement.checked) {
-  //     markAsCompleted(task);
-  //   } else {
-  //     markAsIncomplete(task);
-  //   }
-  //   saveTasks();
-
-  //   // Check if the checkbox is now checked
-  //   if (checkboxElement.checked) {
-  //     deleteButton.style.display = 'block';
-  //     iconElement.style.display = 'none';
-  //     listItemElement.style.display = 'flex';
-  //     listItemElement.style.justifyContent = 'flex-start';
-  //     deleteButton.style.marginLeft = 'auto';
-  //   } else {
-  //     deleteButton.style.display = 'none';
-  //     iconElement.style.display = 'block';
-  //     descriptionElement.style.color = '#999';
-  //   }
-  // });
-
   descriptionElement.textContent = task.description;
 
   descriptionElement.addEventListener('click', () => {
@@ -63,7 +31,7 @@ const createTaskLists = (task) => {
   iconElement.addEventListener('click', () => {
     editTaskDescription(task);
     deleteButton.style.display = 'block';
-    deleteButton.style.height = '20px';
+    deleteButton.style.height = '15px';
     iconElement.style.display = 'none';
     listItemElement.style.backgroundColor = '#f5f5a3';
   });
@@ -88,7 +56,6 @@ function addNewTask(description) {
   const task = { description, completed: false, index: taskIndex };
   tasks.push(task);
   saveTasks();
-  // console.log(task);
   const listItemElement = createTaskLists(task);
   taskList.appendChild(listItemElement);
 }
@@ -138,25 +105,6 @@ editTaskDescription = (task) => {
   inputElement.select();
   task.index += 1;
 };
-
-// // Clearing completed tasks
-// const clearCompletedTasks = () => {
-//   tasks = tasks.filter((task) => !task.completed);
-//   updateTaskIndexes();
-//   saveTasks();
-//   renderTaskList();
-// };
-
-// const clearCompleted = document.getElementById('clear');
-// clearCompleted.addEventListener('click', (event) => {
-//   event.preventDefault();
-//   clearCompletedTasks();
-// });
-// const refreshCompleted = document.getElementById('refresh');
-// refreshCompleted.addEventListener('click', (event) => {
-//   event.preventDefault();
-//   clearCompletedTasks();
-// });
 
 export {
   saveTasks, createTaskLists, renderTaskList, addNewTask,
