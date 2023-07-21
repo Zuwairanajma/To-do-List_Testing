@@ -118,7 +118,6 @@ export const createTaskLists = (task) => {
   return listItemElement;
 };
 
-// Rest of your code...
 function addNewTask(description) {
   const taskIndex = tasks.length + 1;
 
