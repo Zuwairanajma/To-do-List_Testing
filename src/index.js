@@ -1,19 +1,23 @@
 import './index.css';
-import { renderTaskList, addNewTask } from './todoFunctions.js';
 
-const newTask = document.getElementById('new-task-add');
-const form = document.querySelector('form');
+import { renderTaskList, addNewTask } from './modules/todoFunctions.js';
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+  renderTaskList();
 
-  const taskDescription = newTask.value;
-  if (taskDescription.trim() === '') {
-    return;
-  }
+  const newTask = document.getElementById('new-task-add');
+  const form = document.querySelector('form');
 
-  addNewTask(taskDescription);
-  newTask.value = '';
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const taskDescription = newTask.value;
+    if (taskDescription.trim() === '') {
+      return;
+    }
+
+    addNewTask(taskDescription);
+    newTask.value = '';
+    renderTaskList();
+  });
 });
-
-window.addEventListener('load', renderTaskList);
