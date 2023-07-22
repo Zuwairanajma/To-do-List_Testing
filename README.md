@@ -66,7 +66,7 @@ To-do-list is a website built with modules files based on various functionalitie
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-You can view this project using this URL "  https://zuwairanajma.github.io/To-do-List/"
+You can view this project using this URL "  https://zuwairanajma.github.io/To-do-List/dist/"
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p
 
